@@ -11,7 +11,9 @@
 		2C8DD846298E235500E057D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8DD845298E235500E057D2 /* ContentView.swift */; };
 		2C8DD848298E235600E057D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8DD847298E235600E057D2 /* Assets.xcassets */; };
 		2C8DD84B298E235600E057D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8DD84A298E235600E057D2 /* Preview Assets.xcassets */; };
-		2C8DD873298EF5DF00E057D2 /* ActionButton in Frameworks */ = {isa = PBXBuildFile; productRef = 2C8DD872298EF5DF00E057D2 /* ActionButton */; };
+		2C8DD855298E235700E057D2 /* ZotConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8DD854298E235700E057D2 /* ZotConnectTests.swift */; };
+		2C8DD85F298E235700E057D2 /* ZotConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8DD85E298E235700E057D2 /* ZotConnectUITests.swift */; };
+		2C8DD861298E235700E057D2 /* ZotConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8DD860298E235700E057D2 /* ZotConnectUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,10 @@
 		2C8DD847298E235600E057D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C8DD84A298E235600E057D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C8DD850298E235700E057D2 /* ZotConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZotConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8DD854298E235700E057D2 /* ZotConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotConnectTests.swift; sourceTree = "<group>"; };
 		2C8DD85A298E235700E057D2 /* ZotConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZotConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8DD85E298E235700E057D2 /* ZotConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotConnectUITests.swift; sourceTree = "<group>"; };
+		2C8DD860298E235700E057D2 /* ZotConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C8DD873298EF5DF00E057D2 /* ActionButton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				2C8DD842298E235500E057D2 /* ZotConnect */,
+				2C8DD853298E235700E057D2 /* ZotConnectTests */,
+				2C8DD85D298E235700E057D2 /* ZotConnectUITests */,
 				2C8DD841298E235500E057D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +110,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2C8DD853298E235700E057D2 /* ZotConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C8DD854298E235700E057D2 /* ZotConnectTests.swift */,
+			);
+			path = ZotConnectTests;
+			sourceTree = "<group>";
+		};
+		2C8DD85D298E235700E057D2 /* ZotConnectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C8DD85E298E235700E057D2 /* ZotConnectUITests.swift */,
+				2C8DD860298E235700E057D2 /* ZotConnectUITestsLaunchTests.swift */,
+			);
+			path = ZotConnectUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,9 +143,6 @@
 			dependencies = (
 			);
 			name = ZotConnect;
-			packageProductDependencies = (
-				2C8DD872298EF5DF00E057D2 /* ActionButton */,
-			);
 			productName = ZotConnect;
 			productReference = 2C8DD840298E235500E057D2 /* ZotConnect.app */;
 			productType = "com.apple.product-type.application";
@@ -195,9 +215,6 @@
 				Base,
 			);
 			mainGroup = 2C8DD837298E235500E057D2;
-			packageReferences = (
-				2C8DD871298EF5DF00E057D2 /* XCRemoteSwiftPackageReference "action-button" */,
-			);
 			productRefGroup = 2C8DD841298E235500E057D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8DD855298E235700E057D2 /* ZotConnectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8DD85F298E235700E057D2 /* ZotConnectUITests.swift in Sources */,
+				2C8DD861298E235700E057D2 /* ZotConnectUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,25 +583,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2C8DD871298EF5DF00E057D2 /* XCRemoteSwiftPackageReference "action-button" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/eminavedian/action-button";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2C8DD872298EF5DF00E057D2 /* ActionButton */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C8DD871298EF5DF00E057D2 /* XCRemoteSwiftPackageReference "action-button" */;
-			productName = ActionButton;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C8DD838298E235500E057D2 /* Project object */;
 }

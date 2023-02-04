@@ -6,75 +6,28 @@
 //
 
 import SwiftUI
-import ActionButton
 
-
-struct Contentview: View {
-    @StateObject private var model = ViewModel()
-    @FocusState private var focus: FocusableField?
-    
-    var bodv: some View {
-        GroupBox {
-            VStack(spacing: 16) {
-                Image("login")
-                    .resizable()
-                    .scaledToFit()
-                
-                TextField("Email", text: $model.email)
-                    .textContentType(.emailAddress)
-                    .keyboardType(.emailAddress)
-                    .submitLabel(.next)
-                    .focused ($focus, equals: .email)
-                    .onSubmit {
-                        focus = .password
-                    }
-                PasswordField(title: "Password", text: $model.password)
-                    .focused($focus, equals: .password)
-                    .submitLabel(.go)
-                    .onSubmit {
-                        code
-                    }
-                
-                ActionButton(state: $model.buttonstate, onTap: {
-                }, backgroundColor: .primary)
-            }
-        } label: {
-            Label("Welcome back!", systemImage: "hand.wave.fill")
-        }
-        .padding()
-        .textFieldStyle(.plain)
-    }
-}
-struct
-
-struct PostView: View {
+struct ContentView: View {
+    //home page
     var body: some View {
-        VStack(spacing: 16) {
-            HStack {
-                Image("profile")
-                    .resizable()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
-                Text("Username")
-                Spacer()
-                Image(systemName: "ellipsis")
-            }
-            Image("post")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-            HStack {
-                Image(systemName: "heart")
-                Text("Like")
-                Image(systemName: "bubble.right")
-                Text("Comment")
-                Image(systemName: "paperplane")
-                Text("Share")
-                Spacer()
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text("Hello, world!")
+            NavigationLink(destination: LoginView()) {
+                Text("Go to LoginView")
             }
         }
         .padding()
-        .background(Color(.secondarySystemBackground))
-        .cornerRadius(16)
+    }
+    Spacer()
+    var footer: some View {
+        HStack {
+            .padding()
+            Image(systemName: "").imageScale(.large).foregroundColor(.accentColor)
+
+        }
     }
 }
 
