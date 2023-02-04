@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    //home page
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+            NavigationLink(destination: LoginView()) {
+                Text("Go to LoginView")
+            }
         }
         .padding()
+    }
+    Spacer()
+    var footer: some View {
+        HStack {
+            .padding()
+            Image(systemName: "").imageScale(.large).foregroundColor(.accentColor)
+
+        }
     }
 }
 
